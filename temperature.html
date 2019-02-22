@@ -2,6 +2,14 @@
 <html>
 <head>
     <title>Farenheit From Celsius</title>
+    <script>
+        function convertToCelsius(cTemp, obj){
+            hTemp = ((cTemp * 9) / 5) + 32;
+            alert("Temperature in Farenheit: " + hTemp + " degrees");
+            obj.name = parseInt(obj.name) + 10;
+            obj.value = obj.name
+        }
+    </script>
 </head>
 <body>
     <script>
@@ -10,5 +18,9 @@
         document.write("Temperature in Celsius: " + cTemp + " degrees<br>");
         document.write("Temperature in Farenheit: " + hTemp + " degrees")
     </script>
+
+    <input type="button" name="10" value="10 °C" onclick="convertToCelsius(this.name, this)">
+    <input type="button" name="20" value="20 °C" onclick="convertToCelsius(this.name, this)">
+    <input type="button" name="30" value="30 °C" onclick="convertToCelsius(this.name, this)">
 </body>
 </html>
